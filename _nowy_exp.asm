@@ -17,10 +17,10 @@ _nowy_exp PROC
 	fadd st(1), st(0) ;dodwanie pierwszych dwoch elemntow  st(4)
 	fstp st(0)
 
-	fld dword ptr [ebp+8]  ; ST(3) - x (do potêgowania)
-	fld1                   ; ST(2) - mno¿nik mianownika
+	fld dword ptr [ebp+8]  ; ST(3) - x (do potÃªgowania)
+	fld1                   ; ST(2) - mnoÂ¿nik mianownika
 	fld1                   ; ST(1) - mianownik (do dzielenia)
-    fld dword ptr [ebp+8]  ; ST(0) - bierz¹cy wyraz (x)
+    	fld dword ptr [ebp+8]  ; ST(0) - bierzÂ¹cy wyraz (x)
 
 	petla:
 	fmul st(0), st(3) ; licznik
@@ -35,7 +35,6 @@ _nowy_exp PROC
 	fstp st(0) ;st(2)
 	fstp st(0) ;st(1)
 	fstp st(0) ;st(0)
-
 
 	pop ebp
 	ret
